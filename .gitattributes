@@ -1,7 +1,0 @@
-# Все C# файлы учитывать
-*.cs linguist-language=C#
-
-# Убрать мусор из статистики
-*.json linguist-detectable=false
-*.txt linguist-detectable=false
-*.md linguist-detectable=false
