@@ -23,6 +23,7 @@
 * Данные Базы Данных - JointTripService\Presentation\JointTripService.WebHost\appsettings.json
 * Запускаемый файл проекта - JointTripService\Presentation\JointTripService.WebHost
 * [После запуска перейти в swagger](http://localhost:5276/swagger)
+* [Пример работы](https://smallpdf.com/ru/file#s=550a0b21-90a7-4a49-8488-8691f61f29fd)
 
 ## Разработчик
 
