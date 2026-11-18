@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\JointTripService.Infrastructure.EntityFramework\JointTripService.Infrastructure.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Application\JointTripService.Application.Models\JointTripService.Application.Models.csproj" />
+    <ProjectReference Include="..\..\Application\JointTripService.Application.Services\JointTripService.Application.Services.csproj" />
   </ItemGroup>
 
 </Project>

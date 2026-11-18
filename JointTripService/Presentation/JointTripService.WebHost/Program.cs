@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using JointTripService.Infrastructure.EntityFramework;
 using JointTripService.WebHost.Helpers;
 using Microsoft.OpenApi;
+using JointTripService.Application.Services;
+using JointTripService.Domain.Entities;
+using JointTripService.Domain.Repositories.Abstractions.Interfaces;
+using JointTripService.Infrastructure.EntityFramework.RepositoriesEF;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +41,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     });
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IDriverRepository, DriverRepository>();
+builder.Services.AddScoped<IPassengerRepository, PassengerRepository>();
+builder.Services.AddScoped<ITripRepository, TripRepository>();
+builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<DriverApplicationService>();
+builder.Services.AddScoped<PassengerApplicationService>();
+builder.Services.AddScoped<TripApplicationService>();
+builder.Services.AddScoped<BookingApplicationService>();
+builder.Services.AddScoped<ReviewApplicationService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
