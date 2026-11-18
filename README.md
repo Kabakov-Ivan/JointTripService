@@ -19,6 +19,11 @@
 * PresentationLayer
 * ApplicationLayer
 
+## Настройки:
+* Данные Базы Данных - JointTripService\Presentation\JointTripService.WebHost\appsettings.json
+* Запускаемый файл проекта - JointTripService\Presentation\JointTripService.WebHost
+* [После запуска перейти в swagger](http://localhost:5276/swagger)
+
 ## Разработчик
 
 [Кабаков Иван](https://github.com/Kabakov-Ivan)
