@@ -15,8 +15,11 @@
 
 ## Что реализованно:
 DomainLayer
+
 InfrastructureLayer
+
 Presentation
+
 ApplicationLayer
 
 ## Разработчик
