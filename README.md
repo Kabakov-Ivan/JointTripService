@@ -13,9 +13,19 @@
 
 Это сервис для организации совместных поездок, где водители создают поездки, а попутчики могут находить их и бронировать места. Сервис обеспечивает удобное взаимодействие между пользователями и управление поездками без реализации оплаты.
 
-## Что уже реализованно:
+## Что реализованно:
+* DomainLayer
+* InfrastructureLayer
+* PresentationLayer
+* ApplicationLayer
 
-Доменный слой.
+## Настройки:
+* Данные Базы Данных - JointTripService\Presentation\JointTripService.WebHost\appsettings.json
+* Сборка - пересобрать решение
+* Консоль диспетчера пакетов - проект по умолчанию (JointTripService.Infrastructure) - Update-Database
+* Запускаемый файл проекта - JointTripService\Presentation\JointTripService.WebHost
+* [После запуска перейти в swagger](http://localhost:5276/swagger)
+* [Пример работы](https://smallpdf.com/ru/file#s=550a0b21-90a7-4a49-8488-8691f61f29fd)
 
 ## Разработчик
 
