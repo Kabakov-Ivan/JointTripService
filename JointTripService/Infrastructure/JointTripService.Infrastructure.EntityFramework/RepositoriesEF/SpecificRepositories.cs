@@ -29,7 +29,10 @@ public class TripRepository(ApplicationDbContext context) : EfRepository<Trip, G
     }
 
     public override Task<Trip?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
-        => context.Trips.Include(x => x.Driver).Include(x => x.Bookings).ThenInclude(x => x.Passenger).FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+        => context.Trips
+            .Include(x => x.Driver)
+            .Include("_bookings.Passenger")
+            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     public async Task<IEnumerable<Trip>> GetTripsByRouteAsync(City origin, City destination, CancellationToken cancellationToken, bool asNoTracking = false)
     {
         IQueryable<Trip> query = context.Trips.Where(x => x.Origin == origin && x.Destination == destination).Include(x => x.Driver);
